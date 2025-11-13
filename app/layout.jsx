@@ -35,25 +35,25 @@ export default function RootLayout({ children }) {
     <html lang="no">
       <body>
         <div className="page-wrapper">
-
           {/* HEADER */}
           <header className="site-header">
             <div className="header-inner">
 
-              {/* BRANDING */}
-             <div className="brand" style={{ display: "flex", flexDirection: "column" }}>
-  <img
-    src="/moveo-logo.png"
-    alt="Moveo logo"
-    style={{ height: "42px", width: "auto", marginBottom: "4px" }}
-  />
-  <div style={{ lineHeight: "1.2" }}>
-    <div style={{ fontSize: "16px", fontWeight: "600" }}>Thomas Nilsen</div>
-    <div style={{ fontSize: "12px", color: "#5A5A5A" }}>
-      Fysioterapeut • Osteopat • Kognitiv terapeut
-    </div>
-  </div>
-</div>
+              {/* LOGO + NAVN */}
+              <div className="brand-wrapper">
+                <img
+                  src="/moveo-logo.png"
+                  alt="Moveo"
+                  className="moveo-logo"
+                />
+                <div className="brand-text">
+                  <div className="brand-name">Thomas Nilsen</div>
+                  <div className="brand-role">
+                    Fysioterapeut • Osteopat • Kognitiv terapeut
+                  </div>
+                  <div className="brand-clinic">Moveoklinikken · Bodø</div>
+                </div>
+              </div>
 
               {/* NAV */}
               <nav className="main-nav">
@@ -70,7 +70,7 @@ export default function RootLayout({ children }) {
             </div>
           </header>
 
-          {/* SIDENS INNHOLD */}
+          {/* INNHOLD */}
           <main className="page-inner">{children}</main>
 
           {/* FOOTER */}
@@ -84,7 +84,6 @@ export default function RootLayout({ children }) {
               </span>
             </div>
           </footer>
-
         </div>
       </body>
     </html>
