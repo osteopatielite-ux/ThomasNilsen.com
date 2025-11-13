@@ -4,7 +4,7 @@ import Link from "next/link";
 export const metadata = {
   title: "Thomas Nilsen – Fysioterapeut, osteopat og kognitiv terapeut i Bodø",
   description:
-    "Time hos Thomas Nilsen ved Moveoklinikken i Bodø. Fysioterapi, osteopati, kognitiv terapi, løpsanalyse og gruppeopplegg for diabetes.",
+    "Timebestilling og informasjon om behandling hos Thomas Nilsen ved Moveoklinikken i Bodø. Fysioterapi, osteopati, kognitiv terapi, løpsanalyse og oppfølging.",
 };
 
 export default function RootLayout({ children }) {
@@ -12,6 +12,7 @@ export default function RootLayout({ children }) {
     <html lang="no">
       <body>
         <div className="page-wrapper">
+          {/* HEADER */}
           <header className="site-header">
             <div className="header-inner">
               <div className="brand">
@@ -21,6 +22,7 @@ export default function RootLayout({ children }) {
                   Fysioterapeut • Osteopat • Kognitiv terapeut
                 </span>
               </div>
+
               <nav className="main-nav">
                 <Link href="/" className="nav-link">
                   Hjem
@@ -35,16 +37,11 @@ export default function RootLayout({ children }) {
             </div>
           </header>
 
+          {/* PAGE CONTENT */}
           <main className="page-inner">{children}</main>
 
+          {/* FOOTER */}
           <footer className="site-footer">
             <div className="footer-inner">
-              <span>© {new Date().getFullYear()} Thomas Nilsen – Moveoklinikken, Bodø</span>
-              <span>Fysioterapi • Osteopati • Kognitiv terapi • Løpsanalyse</span>
-            </div>
-          </footer>
-        </div>
-      </body>
-    </html>
-  );
-}
+              <span>© {new Date().getFullYear()} Thomas Nilsen – Moveoklinikken Bodø</span>
+              <span>Fysioterapi • O
