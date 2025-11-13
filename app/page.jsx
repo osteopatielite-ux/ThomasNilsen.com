@@ -1,42 +1,39 @@
 export default function Home() {
   return (
-    <main style={{ fontFamily: "Arial", padding: "40px" }}>
-      <img src="/hero.jpg" style={{ width: "100%", borderRadius: "12px", marginBottom: "40px" }} />
+    <>
+      <section className="hero">
+        <img src="/hero.jpg" alt="Thomas Nilsen / Moveoklinikken" className="hero-image" />
 
-      <section style={{ maxWidth: "700px", margin: "0 auto" }}>
-        <h1 style={{ fontSize: "42px", fontWeight: "bold" }}>Thomas Nilsen</h1>
-        <p style={{ fontSize: "22px", marginTop: "10px" }}>
-          Fysioterapeut • Osteopat • Kognitiv terapeut — Bodø
-        </p>
+        <div className="hero-content">
+          <h1 className="hero-title">Thomas Nilsen</h1>
+          <p className="hero-subtitle">
+            Fysioterapeut, osteopat og kognitiv terapeut ved Moveoklinikken i Bodø.
+          </p>
+
+          <div className="button-row">
+            <a
+              className="primary-button"
+              href="mailto:post@moveoklinikken.no?subject=Timebestilling%20hos%20Thomas"
+            >
+              Bestill time
+            </a>
+            <a className="secondary-button" href="/om-meg">
+              Les mer om meg
+            </a>
+          </div>
+        </div>
       </section>
 
-      <section style={{ maxWidth: "700px", margin: "40px auto" }}>
-        <h2 style={{ fontSize: "30px", marginBottom: "10px" }}>Om meg</h2>
-        <p>
-          Jeg heter Thomas Nilsen og jobber ved Moveoklinikken i Bodø. Jeg er
-          utdannet fysioterapeut, osteopat og kognitiv terapeut med over 20 års
-          erfaring innen helsefag.
-        </p>
-      </section>
-
-      <section style={{ maxWidth: "700px", margin: "40px auto" }}>
-        <h2 style={{ fontSize: "30px", marginBottom: "10px" }}>Tjenester</h2>
-        <ul>
-          <li>Fysioterapi</li>
-          <li>Osteopati</li>
-          <li>Kognitiv terapi</li>
-          <li>Løpsanalyse og skadeforebygging</li>
-          <li>Gruppeopplegg for diabetes</li>
+      <section className="section">
+        <h2 className="section-title">Tjenester</h2>
+        <ul className="section-list">
+          <li>Individuell fysioterapi for smerter og skader</li>
+          <li>Osteopatisk tilnærming til langvarige plager</li>
+          <li>Kognitiv terapi for stress, tankekjør og belastning</li>
+          <li>Løpsanalyse og hjelp til å komme i gang med løping</li>
+          <li>Strukturert gruppeopplegg for personer med diabetes</li>
         </ul>
       </section>
-
-      <section style={{ maxWidth: "700px", margin: "40px auto" }}>
-        <h2 style={{ fontSize: "30px", marginBottom: "10px" }}>Kontakt</h2>
-        <p>
-          Instagram:{" "}
-          <a href="https://instagram.com/osteopat_thomas">@osteopat_thomas</a>
-        </p>
-      </section>
-    </main>
+    </>
   );
 }
