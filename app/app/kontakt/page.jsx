@@ -29,8 +29,8 @@ export default function KontaktPage() {
       <p className="section-text">
         <strong>Adresse:</strong><br />
         Moveoklinikken  
-        Sjøgata 3  
-        8006 Bodø
+        stormyrveien 10 
+        8010 Bodø
       </p>
 
       <p className="section-text">
