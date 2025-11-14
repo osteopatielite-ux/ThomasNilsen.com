@@ -1,26 +1,15 @@
-/* === Reset === */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-/* === Base styling === */
+/* Global styles */
 body {
-  background: #F5F5F7;
-  color: #1A1A1A;
-  font-family: system-ui, sans-serif;
-  line-height: 1.5;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
+  @apply bg-white text-neutral-900 antialiased;
 }
 
 .page-wrapper {
-  min-height: 100vh;
   display: flex;
+  min-height: 100vh;
   flex-direction: column;
 }
 
@@ -28,134 +17,50 @@ a {
   flex: 1;
 }
 
-/* ==============================================
-   HEADER & NAV
-   ============================================== */
-
+/* Header */
 .site-header {
-  background: rgba(255, 255, 255, 0.9);
-  backdrop-filter: blur(8px);
-  border-bottom: 1px solid #E5E7EB;
+  @apply w-full border-b border-neutral-200 bg-white;
 }
 
 .header-inner {
-  max-width: 1040px;
-  margin: 0 auto;
-  padding: 14px 20px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  @apply max-w-5xl mx-auto px-4 py-4 flex justify-between items-center;
 }
 
-/* LEFT: logo + name */
 .brand-wrapper {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-
-.moveo-logo {
-  height: 40px;
-  width: auto;
+  @apply flex items-center gap-4;
 }
 
 .brand-text {
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
+  @apply leading-tight;
 }
 
 .brand-name {
-  font-size: 16px;
-  font-weight: 600;
+  @apply text-xl font-semibold;
 }
 
 .brand-role {
-  font-size: 12px;
-  color: #5A5A5A;
+  @apply text-sm text-neutral-600;
 }
 
 .brand-clinic {
-  font-size: 11px;
-  color: #2563EB;
+  @apply text-sm text-neutral-500;
 }
 
-/* RIGHT: NAVIGATION */
-.main-nav {
-  display: flex;
-  gap: 18px;
+.moveo-logo {
+  height: 48px;
+  width: auto;
 }
 
+/* Nav */
 .nav-link {
-  font-size: 14px;
-  color: #4B5563;
-  padding: 6px 10px;
-  border-radius: 999px;
+  @apply text-neutral-700 hover:text-black ml-6;
 }
 
-.nav-link:hover {
-  background: #E8F1FA;
-  color: #0051A0;
+/* Footer */
+.site-footer {
+  @apply border-t border-neutral-200 bg-gray-50 py-6 mt-12;
 }
 
-/* ==============================================
-   HERO SECTION
-   ============================================== */
-
-.hero {
-  max-width: 1040px;
-  margin: 0 auto;
-  padding: 40px 20px;
+.footer-inner {
+  @apply max-w-5xl mx-auto px-4 text-sm text-neutral-600 flex flex-col gap-1;
 }
-
-.hero-image {
-  width: 100%;
-  border-radius: 16px;
-  object-fit: cover;
-  max-height: 480px;
-}
-
-.hero-title {
-  font-size: 40px;
-  font-weight: 700;
-  margin-top: 20px;
-  text-align: center;
-}
-
-.hero-subtitle {
-  font-size: 18px;
-  color: #5A5A5A;
-  margin-top: 10px;
-  margin-bottom: 20px;
-  text-align: center;
-}
-
-/* ==============================================
-   BUTTONS
-   ============================================== */
-
-.button-row {
-  display: flex;
-  gap: 14px;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.primary-button {
-  background: #0051A0;
-  color: white;
-  padding: 12px 24px;
-  font-size: 15px;
-  border-radius: 999px;
-  font-weight: 500;
-}
-
-.primary-button:hover {
-  background: #003A75;
-}
-
-.secondary-button {
-  background: #E5E7EB;
-  color: #1A1A1A;
-  padding: 12px 24px;
-  font-size: 15px
